@@ -30,8 +30,8 @@ RUN \
   cd /opt/doge/nut/conf && \
   
   # check if nut config exists else make a copy
-  if [ ! -f nut.conf ]; then && \
-    cp nut.default.conf nut.conf && \
+  if [ ! -f nut.conf ]; then \
+    cp nut.default.conf nut.conf \
   fi
   
 ENTRYPOINT ["./start.sh"]
