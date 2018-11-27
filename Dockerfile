@@ -23,7 +23,9 @@ RUN \
   
   # check if doge.config.json already exists else make a copy
   if [ ! -f doge.config.json ]; then \
-    cp doge.config.default.json doge.config.json
+    cp doge.config.default.json doge.config.json \
+  else \
+  fi
  
 RUN \ 
   # set work dir
