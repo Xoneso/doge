@@ -11,7 +11,7 @@ RUN \
 	python3-pip \
 	wget && \
 
-  pip3 install pipenv colorama pyopenssl requests tqdm unidecode image bs4 urllib3 flask \
+  pip3 install pipenv colorama pyopenssl requests tqdm unidecode image bs4 urllib3 flask
 
 RUN \
   # git clone doge and nut
@@ -19,7 +19,7 @@ RUN \
   git clone git://github.com/blawar/nut.git /app/doge/nut && \
   
   # set work dir
-  cd /opt/doge \
+  cd /opt/doge
   
 RUN \
   # check if doge.config.json already exists else make a copy
@@ -28,12 +28,12 @@ RUN \
   fi && \
   
   # set work dir
-  cd /opt/doge/nut/conf \
+  cd /opt/doge/nut/conf
   
 RUN \  
   # check if nut config exists else make a copy
-  if [ ! -f nut.conf ]; then \
-    cp nut.default.conf nut.conf \
+  if [ ! -f nut.conf ]; then && \
+    cp nut.default.conf nut.conf && \
   fi
   
 ENTRYPOINT ["./start.sh"]
