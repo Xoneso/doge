@@ -7,7 +7,7 @@ RUN \
 	ca-certificates \
 	curl \
   	nodejs \
-	python3-pip \
+	#python3-pip \
 	wget && \
 
   pip3 install pipenv colorama pyopenssl requests tqdm unidecode image bs4 urllib3 flask
@@ -34,5 +34,6 @@ RUN \
   if [ ! -f nut.conf ]; then && \
     cp nut.default.conf nut.conf && \
   fi
-  
+
+WORKDIR /app/doge
 ENTRYPOINT ["./start.sh"]
