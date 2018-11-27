@@ -11,4 +11,4 @@ RUN \
   chmod +x /app/doge/start.sh
 
 WORKDIR /app/doge
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["/app/doge/start.sh"]
