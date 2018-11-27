@@ -7,7 +7,6 @@ RUN \
 	ca-certificates \
 	curl \
   	nodejs \
-	python3.6 \
 	python3-pip \
 	wget && \
 
