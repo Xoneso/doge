@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python3:3.6
+FROM lsiobase/alpine.python3:3.8
 MAINTAINER sauyri84
 
 # install packages
