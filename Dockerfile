@@ -1,5 +1,5 @@
 FROM lsiobase/alpine:edge
-MAINTAINER sauyri
+MAINTAINER sauyri84
 
 # install packages
 RUN \
