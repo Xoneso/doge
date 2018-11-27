@@ -18,7 +18,7 @@ RUN \
   git clone git://github.com/blawar/nut.git /app/doge/nut && \
   
   # set work dir
-  cd /opt/doge
+  cd /app/doge
   
 RUN \
   # check if doge.config.json already exists else make a copy
@@ -27,7 +27,7 @@ RUN \
   fi && \
   
   # set work dir
-  cd /opt/doge/nut/conf
+  cd /app/doge/nut/conf
   
 RUN \  
   # check if nut config exists else make a copy
