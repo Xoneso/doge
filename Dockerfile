@@ -22,8 +22,8 @@ RUN \
   
 RUN \
   # check if doge.config.json already exists else make a copy
-  if [ ! -f doge.config.json ]; then && \
-    cp doge.config.default.json doge.config.json && \
+  if [ ! -f doge.config.json ]; then \
+    cp doge.config.default.json doge.config.json \
   fi && \
   
   # set work dir
@@ -31,8 +31,8 @@ RUN \
   
 RUN \  
   # check if nut config exists else make a copy
-  if [ ! -f nut.conf ]; then && \
-    cp nut.default.conf nut.conf && \
+  if [ ! -f nut.conf ]; then \
+    cp nut.default.conf nut.conf \
   fi
 
 WORKDIR /app/doge
