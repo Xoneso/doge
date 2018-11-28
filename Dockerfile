@@ -4,7 +4,7 @@ MAINTAINER sauyri84
 COPY start.sh .
 # install packages
 RUN \
-  chmod +x ./start.sh
+  chmod +x ./start.sh && \
   apk add --no-cache curl nodejs wget && \
   pip3 install pipenv colorama pyopenssl requests tqdm unidecode image bs4 urllib3 flask && \
   # git clone doge and nut
