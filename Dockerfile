@@ -1,6 +1,7 @@
 FROM lsiobase/alpine.python3:3.8
 MAINTAINER sauyri84
 
+WORKDIR /app/doge
 COPY start.sh .
 # install packages
 RUN \
