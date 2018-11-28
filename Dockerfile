@@ -1,16 +1,14 @@
 FROM lsiobase/alpine.python3:3.8
 MAINTAINER sauyri84
 
+COPY start.sh .
 # install packages
 RUN \
+  chmod +x ./start.sh
   apk add --no-cache curl nodejs wget && \
   pip3 install pipenv colorama pyopenssl requests tqdm unidecode image bs4 urllib3 flask && \
   # git clone doge and nut
-  git clone git://github.com/wowsuchdoge/doge.git /app/doge
-RUN \
-  git clone git://github.com/blawar/nut.git /app/doge/nut &&
-COPY start.sh . 
-RUN \
-  chmod +x ./start.sh
+  git clone git://github.com/wowsuchdoge/doge.git /app/doge && \
+  git clone git://github.com/blawar/nut.git /app/doge/nut
   
 ENTRYPOINT ["./start.sh"]
