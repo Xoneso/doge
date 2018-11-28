@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /doge/server
+cd server
 
 while true
 do
