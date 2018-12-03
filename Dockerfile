@@ -10,6 +10,6 @@ RUN \
   # git clone doge and nut
   git clone git://github.com/wowsuchdoge/doge.git /app/doge && \
   git clone git://github.com/blawar/nut.git /app/doge/nut
-COPY start.sh .
+COPY start.sh /start.sh
 RUN chmod +x ./start.sh 
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["/bin/sh","start.sh"]
