@@ -6,7 +6,7 @@ RUN \
   apk add --no-cache nodejs && \
   pip3 install pipenv colorama pyopenssl requests tqdm unidecode image bs4 urllib3 flask && \
   # git clone doge and nut
-  mkdir /app/doge && \
+  mkdir -p /app/{doge,doge/nut} && \
   git clone git://github.com/wowsuchdoge/doge.git /app/doge && \
   git clone git://github.com/blawar/nut.git /app/doge/nut
 COPY start.sh /start.sh
