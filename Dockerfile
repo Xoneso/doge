@@ -1,8 +1,6 @@
 FROM lsiobase/alpine.python3:3.8
 MAINTAINER sauyri84
 
-WORKDIR /app/doge
-
 # install packages
 RUN \
   apk add --no-cache nodejs && \
@@ -11,5 +9,4 @@ RUN \
   git clone git://github.com/wowsuchdoge/doge.git /app/doge && \
   git clone git://github.com/blawar/nut.git /app/doge/nut
 COPY start.sh /start.sh
-RUN chmod +x ./start.sh 
 ENTRYPOINT ["/bin/sh","start.sh"]
